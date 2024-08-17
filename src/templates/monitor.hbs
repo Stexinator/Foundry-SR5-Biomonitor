@@ -10,47 +10,51 @@
     </div>
   </div>
   <!--Actor Part-->
-  <div class="sr5-biomon-header-box">
-    <div class="sr5-biomon-label sr5-biomon-top">Character</div>
-    <div class="sr5-biomon-label sr5-biomon-top">Statuses</div>
-  </div>
-  {{#each actors}}
-    <div class="sr5-biomon-actors-box" actor-uuid="{{this.id}}">
-      <!--Acotor Image-->
-      <div class="image_infos">
-        <div class="sr5-biomon-value sr5-biomon-name">
-          {{this.name}}
-        </div>
-        <div class="sr5-biomon-image">
-          <img src='{{this.image}}'>
-        </div>
-      </div>
-      <!--Physikal Boxes-->
-      <div class="sr5-biomon-track-container">
-          {{#for 0 this.physTrack.value}}
-            <div class="sr5-biomon-physik-filled sr5-biomon-track"></div>
-          {{/for}}
-          {{#for this.physTrack.value this.physTrack.max}}
-            <div class="sr5-biomon-physik sr5-biomon-track"></div>
-          {{/for}}
-        <!--Stun Boxes-->
-          {{#for 0 this.stunTrack.value }}
-            <div class="sr5-biomon-stun-filled sr5-biomon-track"></div>
-          {{/for}}
-          {{#for this.stunTrack.value this.stunTrack.max}}
-              <div class="sr5-biomon-stun sr5-biomon-track"></div>
-          {{/for}}
-      </div>
-      <!--Status Section sr5-biomon-label can be removed once statuses have be sorted-->     
-      <div class="sr5-biomon-effects">
-        {{#each this.statuses}}
-        <div class="sr5-biomon-image-view">
-          <img src='{{this.img}}' title='{{localize this.name}}'>
-        </div>
-        {{/each}}
-      </div>
-      <!--End Actor Section-->
-    
+    <div class="sr5-biomon-header-box">
+      <div class="sr5-biomon-label sr5-biomon-top">Character</div>
+      <div class="sr5-biomon-label sr5-biomon-top">Statuses</div>
     </div>
-  {{/each}}
+    {{#each actors}}
+      <div class="sr5-biomon-actors-box" actor-uuid="{{this.id}}">
+        <!--Acotor Image-->
+        <div class="image_infos">
+          <div class="sr5-biomon-value sr5-biomon-name">
+            {{this.name}}
+          </div>
+          <div class="sr5-biomon-image">
+            <img src='{{this.image}}'>
+          </div>
+        </div>
+        <!--Physikal Boxes-->
+        <div class="sr5-biomon-track-container">
+            {{#for 0 this.physTrack.value}}
+              <div class="sr5-biomon-physik-filled sr5-biomon-track"></div>
+            {{/for}}
+            {{#for this.physTrack.value this.physTrack.max}}
+              <div class="sr5-biomon-physik sr5-biomon-track"></div>
+            {{/for}}
+          <!--Stun Boxes-->
+            {{#for 0 this.stunTrack.value }}
+              <div class="sr5-biomon-stun-filled sr5-biomon-track"></div>
+            {{/for}}
+            {{#for this.stunTrack.value this.stunTrack.max}}
+                <div class="sr5-biomon-stun sr5-biomon-track"></div>
+            {{/for}}
+        </div>
+        <!--Status Section sr5-biomon-label can be removed once statuses have be sorted-->     
+        <div class="sr5-biomon-effects">
+          {{#each this.statuses}}
+          <div class="sr5-biomon-image-view">
+            <img src='{{this.img}}' title='{{localize this.name}}'>
+          </div>
+          {{/each}}
+        </div>
+        <!--Extra Description Box-->
+        <!--<div class="fa-solid fa-chevron-right"></div>
+        <div class="sr5-biommon-actors-box breakout-box" ckeckbox="false">
+          Any Content Here
+        </div>-->
+        <!--End Actor Section-->
+      </div>  
+    {{/each}}
 </div>

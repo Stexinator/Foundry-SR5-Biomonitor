@@ -2,6 +2,7 @@
 :root{
   --primaryBackground: rgba(0, 0, 0, 0.445);
   --buttonMain: rgb(83, 1, 1);
+  --headerHover: rgb(163 5 5);
   --buttonsecdry: rgb(4, 4, 170);
   --health: rgb(231, 41, 41);
   --stun: rgb(15, 70, 250); 
@@ -49,6 +50,9 @@ border-style: none;
 }
 .sr5-biomon-label.sr5-biomon-top{
   color: var(--buttonHighlight);
+}
+.sr5-biomon-label.sr5-biomon-top:hover{
+  color: var(--headerHover);
 }
 /*Header Image*/
 .sr5-biomon-image-head{
@@ -103,6 +107,7 @@ border-style: none;
   background-color: rgba(211, 211, 211, 0.322); /* Color of your 'shadow' */
   box-shadow: var(--boxShadow);
   z-index: 1; /* Ensures the shadow is above the content */
+  overflow: visible;
 }
 /*Hover Effect on the Actor*/
 .sr5-biomon-actors-box:hover {
